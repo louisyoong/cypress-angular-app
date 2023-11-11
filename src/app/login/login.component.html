@@ -19,25 +19,16 @@
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >Username</label
             >
+            <!---todo add data-testid -->
             <input
               type="text"
               id="username"
               name="username"
               [(ngModel)]="username"
               class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Johnny"
-              required=""
+              placeholder="username"
+              required="true"
             />
-            <!-- <input
-              data-testid="username-input"
-              type="text"
-              id="username"
-              name="username"
-              [(ngModel)]="username"
-              class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Johnny"
-              required=""
-            /> -->
           </div>
           <div>
             <label
@@ -45,6 +36,7 @@
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >Password</label
             >
+            <!---todo add data-testid -->
             <input
               type="password"
               id="password"
@@ -52,18 +44,8 @@
               [(ngModel)]="password"
               placeholder="••••••••"
               class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              required=""
+              required="true"
             />
-            <!-- <input
-              data-testid="password-input"
-              type="password"
-              id="password"
-              name="password"
-              [(ngModel)]="password"
-              placeholder="••••••••"
-              class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              required=""
-            /> -->
           </div>
 
           <button
@@ -93,6 +75,7 @@
         <!-- Error Alert -->
         <div
           *ngIf="showErrorAlert"
+          data-testid="error-alert-message"
           class="mt-4 bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow"
         >
           <p>Login failed. Please check your username and password.</p>
