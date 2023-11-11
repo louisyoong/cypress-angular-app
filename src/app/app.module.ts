@@ -8,10 +8,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CanvasComponent } from './canvas/canvas.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClickComponent } from './click/click.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, CanvasComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    CanvasComponent,
+    ClickComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

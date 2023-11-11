@@ -1,0 +1,58 @@
+<div class="m-10">
+  <!---click--->
+  <h2 class="mb-2 text-lg">
+    To click a DOM element, use the
+    <code class="text-blue-500">.click()</code> command.
+  </h2>
+  <button
+    (click)="toggleHello()"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+  >
+    Click popover
+  </button>
+  <div
+    *ngIf="showHello"
+    role="tooltip"
+    class="w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm mt-3"
+  >
+    <div class="px-3 py-2 border-b border-gray-200 rounded-t-lg bg-gray-100">
+      <h3 class="font-semibold text-gray-900">Popover hover</h3>
+    </div>
+    <div class="px-3 py-2">
+      <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+  </div>
+
+  <!---dblclick--->
+  <h2 class="mt-10 text-lg">
+    To double click a DOM element, use the
+    <code class="text-blue-500">.dblclick()</code> command
+  </h2>
+  <div class="bg-gray-100 p-5" (dblclick)="onDoubleClick()">
+    <p *ngIf="!showInputDbClick">Double click to edit</p>
+    <div>
+      <input
+        class="rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 border-gray-600 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+        *ngIf="showInputDbClick"
+        [(ngModel)]="inputValue"
+        placeholder="Double click to edit"
+      />
+    </div>
+  </div>
+
+  <h2 class="mt-10 text-lg">
+    To right click a DOM element, use the
+    <code class="text-blue-500">.rightclick()</code> command
+  </h2>
+  <div class="bg-gray-100 p-5" (contextmenu)="onRightClick($event)">
+    <p *ngIf="!showInputRightClick">Right click to edit</p>
+    <div>
+      <input
+        class="rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 border-gray-600 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+        *ngIf="showInputRightClick"
+        [(ngModel)]="inputValue"
+        placeholder="Enter something"
+      />
+    </div>
+  </div>
+</div>
