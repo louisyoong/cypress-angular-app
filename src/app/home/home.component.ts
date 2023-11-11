@@ -1,4 +1,3 @@
-// In your home.component.ts
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../service/pokemon.service';
 
