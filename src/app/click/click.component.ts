@@ -11,7 +11,7 @@ export class ClickComponent {
   showInputRightClick: boolean = false;
   inputValue: string = '';
 
-  toggleHello() {
+  togglePopover() {
     this.showHello = !this.showHello;
   }
 

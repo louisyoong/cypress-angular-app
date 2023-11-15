@@ -7,6 +7,7 @@
   <div
     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
   >
+    <!---todo add data-testid --->
     <ng-container *ngFor="let pokemon of pokemonList">
       <div
         class="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-md hover:ring-4 hover:ring-yellow-400 transition-transform transform hover:scale-105"
@@ -17,7 +18,10 @@
           class="w-full h-auto"
         />
 
-        <p class="text-white text-center">{{ pokemon.name }}</p>
+        <!---todo add data-testid --->
+        <p class="text-white text-center">
+          {{ pokemon.name }}
+        </p>
       </div>
     </ng-container>
   </div>
