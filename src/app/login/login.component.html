@@ -9,7 +9,7 @@
         <h1
           class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
         >
-          Sign in to your account
+          Login to your account
         </h1>
 
         <form (ngSubmit)="login()" class="space-y-4 md:space-y-6">
@@ -52,7 +52,7 @@
             type="submit"
             class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            Sign in
+            Login
           </button>
           <p class="text-sm font-light text-gray-500 dark:text-gray-400">
             Don’t have an account yet?
@@ -76,6 +76,7 @@
         <!---todo add data-testid --->
         <div
           *ngIf="showErrorAlert"
+          data-testid="action-error-alert-message"
           class="mt-4 bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow"
         >
           <p>Login failed. Please check your username and password.</p>
